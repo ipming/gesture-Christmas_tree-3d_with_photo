@@ -626,6 +626,11 @@
             const greenMat = new THREE.MeshStandardMaterial({ color: CONFIG.colors.deepGreen, metalness: 0.2, roughness: 0.8, emissive: 0x002200, emissiveIntensity: 0.2 });
             const redMat = new THREE.MeshPhysicalMaterial({ color: CONFIG.colors.accentRed, metalness: 0.3, roughness: 0.2, clearcoat: 1.0, emissive: 0x330000 });
             const candyMat = new THREE.MeshStandardMaterial({ map: caneTexture, roughness: 0.4 });
+            const blueMat = new THREE.MeshStandardMaterial({ color: CONFIG.colors.accentBlue, metalness: 0.7, roughness: 0.4 });
+            const silverMat = new THREE.MeshStandardMaterial({ color: CONFIG.colors.silver, metalness: 0.9, roughness: 0.2 });
+
+
+          
 //   - @Project: Grand Luxury Tree - Christmas Edition (Touch & Gesture)
 //   - @Author: wp/electronicminer qq:2013248845
 //   - @Date: 2025-12-07
@@ -635,9 +640,11 @@
             for (let i = 0; i < CONFIG.particles.count; i++) {
                 const rand = Math.random();
                 let mesh, type;
-                if (rand < 0.40) { mesh = new THREE.Mesh(boxGeo, greenMat); type = 'BOX'; }
-                else if (rand < 0.70) { mesh = new THREE.Mesh(boxGeo, goldMat); type = 'GOLD_BOX'; }
-                else if (rand < 0.92) { mesh = new THREE.Mesh(sphereGeo, goldMat); type = 'GOLD_SPHERE'; }
+                if (rand < 0.32) { mesh = new THREE.Mesh(boxGeo, greenMat); type = 'BOX'; }
+                else if (rand < 0.50) { mesh = new THREE.Mesh(boxGeo, goldMat); type = 'GOLD_BOX'; }
+                else if (rand < 0.68) { mesh = new THREE.Mesh(sphereGeo, goldMat); type = 'GOLD_SPHERE'; }
+                else if (rand < 0.80) { mesh = new THREE.Mesh(sphereGeo, silverMat); type = 'SILVER'; }
+                else if (rand < 0.92) { mesh = new THREE.Mesh(sphereGeo, blueMat); type = 'BLUE'; }
                 else if (rand < 0.97) { mesh = new THREE.Mesh(sphereGeo, redMat); type = 'RED'; }
                 else { mesh = new THREE.Mesh(candyGeo, candyMat); type = 'CANE'; }
                 const s = 0.4 + Math.random() * 0.5;
@@ -908,6 +915,7 @@
 </body>
 
 </html>
+
 
 
 
