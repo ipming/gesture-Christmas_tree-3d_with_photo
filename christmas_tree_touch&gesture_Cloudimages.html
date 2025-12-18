@@ -643,9 +643,8 @@
                 if (rand < 0.32) { mesh = new THREE.Mesh(boxGeo, greenMat); type = 'BOX'; }
                 else if (rand < 0.50) { mesh = new THREE.Mesh(boxGeo, goldMat); type = 'GOLD_BOX'; }
                 else if (rand < 0.68) { mesh = new THREE.Mesh(sphereGeo, goldMat); type = 'GOLD_SPHERE'; }
-                else if (rand < 0.80) { mesh = new THREE.Mesh(sphereGeo, silverMat); type = 'SILVER'; }
-                else if (rand < 0.92) { mesh = new THREE.Mesh(sphereGeo, blueMat); type = 'BLUE'; }
-                else if (rand < 0.97) { mesh = new THREE.Mesh(sphereGeo, redMat); type = 'RED'; }
+                else if (rand < 0.85) { mesh = new THREE.Mesh(sphereGeo, silverMat); type = 'SILVER'; }
+                else if (rand < 0.95) { mesh = new THREE.Mesh(sphereGeo, redMat); type = 'RED'; }
                 else { mesh = new THREE.Mesh(candyGeo, candyMat); type = 'CANE'; }
                 const s = 0.4 + Math.random() * 0.5;
                 mesh.scale.set(s,s,s); mesh.rotation.set(Math.random()*6, Math.random()*6, Math.random()*6);
@@ -915,6 +914,7 @@
 </body>
 
 </html>
+
 
 
 
